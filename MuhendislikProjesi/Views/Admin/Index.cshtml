@@ -1,0 +1,30 @@
+﻿@using MuhendislikProjesi.Models.Siniflar
+@model List<Haber>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Index</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>HABER BAŞLIĞI</th>
+        <th>SİL</th>
+        <th>GUNCELLE</th>
+
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.HaberID</td>
+            <td>@x.HaberBaslik</td>
+            <td><a href="/Admin/HaberSil/@x.HaberID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Admin/HaberDetay/@x.HaberID" class="btn btn-default">Guncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/Admin/YeniHaber/" class="btn btn-group">Yeni Haber Ekle</a>
+
+

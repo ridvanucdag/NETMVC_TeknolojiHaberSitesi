@@ -1,0 +1,33 @@
+﻿@using MuhendislikProjesi.Models.Siniflar
+@model List<Hakkimizda>
+@{
+    ViewBag.Title = "Hakkimizda";
+    Layout = "~/Views/Shared/_LayoutTeknoloji.cshtml";
+}
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Muhendislik Projesi</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="css/slider.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+
+    <div class="content">
+        <div class="wrap">
+            <div class="about">
+                <h3>Mühendislik Projesi Hakkımızda</h3>
+                @foreach (var x in Model)
+                {
+                   <p>@x.HakkimizdaAciklama</p>  
+                }
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<title>Mühendislik Projesi Admin Paneli</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<body>
+
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:20%">
+        <h3 class="w3-bar-item">Dashboard</h3>
+        <a href="/Admin/Index/" class="btn btn-success" style="width:100%;height: 40px;">Ana Sayfa</a>
+        <a href="/Admin/AdminEkleCikar/" class="btn btn-info" style="width:100%;height: 40px">Admin Ekle</a>
+        <a href="/Admin/YeniHaber/" class="btn btn-info" style="width:100%;height: 40px">Yeni Haber</a>
+        <a href="/Admin/Hakkimizda/" class="btn btn-info" style="width:100%;height: 40px">Hakkımızda</a>
+        @*<a href="#" class="btn btn-info" style="width:100%;height: 40px">İletişim</a>*@
+        <a href="/Default/Index/" class="btn btn-primary" style="width:100%;height: 40px">Web Sitesi'ne Git</a>
+        <a href="/Login/Logout/" class="btn btn-danger" style="width:100%;height: 40px">Çıkış Yap</a>
+        
+    </div>
+
+    <!-- Page Content -->
+    <div style="margin-left:20%">
+        <h3 class="w3-bar-item">Mühendislik Projesi Yönetim Paneli</h3>
+
+        @RenderBody()
+
+    </div>
+
+</body>
+</html>
+
+

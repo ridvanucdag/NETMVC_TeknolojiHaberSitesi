@@ -1,0 +1,18 @@
+﻿@using MuhendislikProjesi.Models.Siniflar
+@model List<Haber>
+
+@foreach (var d in Model)
+{
+    <div class="right" style="height:330px; width:323px;">
+        <div class="bot-right" >
+            <a href="/Default/HaberDetay/@d.HaberID"><img src="@d.HaberFoto" alt="" style="height:175px; width:300px;" /></a>
+</div>
+        <div class="left-text">
+            <h4><a href="/Default/HaberDetay/@d.HaberID">@d.HaberBaslik</a> </h4>
+            <p>@d.HaberAciklama.Substring(0, 93)</p>
+            <span>Yüklenme Tarihi: @d.HaberTarih.ToString("dd.MM.yyyy")</span>
+
+        </div>
+    </div>
+}
+

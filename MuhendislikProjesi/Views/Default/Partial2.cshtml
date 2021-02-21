@@ -1,0 +1,19 @@
+﻿@using MuhendislikProjesi.Models.Siniflar
+@model List<Haber>
+
+
+<h3>SON HABERLER</h3>
+
+<ul>
+    @foreach (var m in Model)
+    {
+
+        <li><a href="/Default/HaberDetay/@m.HaberID"><img src="@m.HaberFoto" alt="" height="150" width="300" /></a></li>
+        <h3><a href="/Default/HaberDetay/@m.HaberID"><br />@m.HaberBaslik</a> </h3>
+        <h6>
+            @m.HaberTarih
+        </h6> 
+    }
+
+</ul>
+

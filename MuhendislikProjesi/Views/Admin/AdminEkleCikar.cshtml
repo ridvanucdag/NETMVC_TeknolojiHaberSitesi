@@ -1,0 +1,28 @@
+﻿@using MuhendislikProjesi.Models.Siniflar
+@model List<Admin>
+@{
+    ViewBag.Title = "AdminEkleCikar";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Admin Ekle Çıkar</h2>
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>KULLANICI ADI</th>
+        <th>ŞİFRE</th>
+        <th>SİL</th>
+
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.KullaniAdi</td>
+            <td>@x.Sifre</td>
+            <td><a href="/Admin/AdminSil/@x.AdminID" class="btn btn-danger">Sil</a></td>
+        </tr>
+    }
+</table>
+
+<a href="/Admin/AdminEkle/ class="btn btn-primary"><button class="btn btn-success">Yeni Admin Ekle</button></a>

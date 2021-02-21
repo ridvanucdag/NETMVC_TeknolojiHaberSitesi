@@ -1,0 +1,22 @@
+﻿@model MuhendislikProjesi.Models.Siniflar.Admin
+
+@{
+    ViewBag.Title = "AdminEkle";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>AdminEkle</h2>
+<br />
+@*@Html.Action("PartialAdmin", "Admin")
+<br />*@
+<form class="form-group" method="post">
+
+    @Html.LabelFor(x => x.KullaniAdi)
+    @Html.TextBoxFor(x => x.KullaniAdi, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Sifre)
+    @Html.TextBoxFor(x => x.Sifre, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Admin Ekle</button>
+
+</form>

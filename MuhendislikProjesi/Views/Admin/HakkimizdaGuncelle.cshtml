@@ -1,0 +1,22 @@
+﻿@model MuhendislikProjesi.Models.Siniflar.Hakkimizda
+
+@{
+    ViewBag.Title = "HakkimizdaGuncelle";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Hakkimizda Guncelle</h2>
+
+@using (Html.BeginForm("HakkimizdaGuncelleme", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(x =>x.HakkimizdaID)
+    @Html.TextBoxFor(x => x.HakkimizdaID, new { @class = "form-control", @readonly = "readonly" })
+    @*<br />
+    @Html.LabelFor(x => x.HakkimizdaFoto)
+    @Html.TextBoxFor(x => x.HakkimizdaFoto, new { @class = "form-control" })*@
+    <br />
+    @Html.LabelFor(x => x.HakkimizdaAciklama)
+    @Html.TextAreaFor(x => x.HakkimizdaAciklama, 8, 1, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Hakkımızda Güncelle</button>
+}

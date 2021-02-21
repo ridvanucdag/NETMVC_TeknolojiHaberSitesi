@@ -1,0 +1,226 @@
+﻿@using MuhendislikProjesi.Models.Siniflar
+@model List<Haber>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutTeknoloji.cshtml";
+}
+
+<!DOCTYPE HTML>
+<html>
+<body>
+    <div class"content">
+        <div class="wrap">
+            <div class="wrapper">
+                <div class="slider">
+                    <ul class="rslides" id="slider1">
+                        @foreach (var m in Model)
+                        {
+                            <li>
+                                <a href="/Default/HaberDetay/@m.HaberID">
+                                    <img src="@m.HaberFoto" height="10" alt="" style="height:515px; width:1000px;"><h3>@m.HaberBaslik</h3>
+                                </a>
+                            </li>
+                        }
+
+                    </ul>
+                </div>
+                <br />
+                <div class="con-bot">
+                    @Html.Action("Partial1", "Default")
+                </div>
+
+                <br />
+                <div class="wrap">
+                    <div class="banner">
+                        <div class="indent">
+                            <div class="banner-left">
+                                <div class="con-text">
+
+                                    <div class="grid1-desc">
+                                        <p>Teknoloji</p>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="con-text">
+
+                                    <div class="grid1-desc">
+                                        <p>Sosyal Medya</p>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="con-text">
+
+                                    <div class="grid1-desc">
+                                        <p>Google</p>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="con-text">
+
+                                    <div class="grid1-desc">
+                                        <p>Apple</p>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+
+                                <div class="clear"></div>
+                            </div>
+                            <div class="header_bottom_right_images">
+
+                                <div class="slider">
+                                    <ul class="rslides" id="slider1">
+                                        <li><img src="~/web/images/hp.jpg" alt=""></li>
+                                        <li><img src="~/web/images/huawei.jpg" alt=""></li>
+                                        <li><img src="~/web/images/intel.jpg" alt=""></li>
+                                        <li><img src="~/web/images/dell.jpg" alt=""></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+
+                <div class="right" style="height:310px; width:309px;">
+                    <div class="bot-left">
+                        <a href="/Default/HaberDetay/1"><img src="~/web/images/google.jpg" alt="" height="175" width="300" /></a>
+                    </div>
+                    <div class="left-text">
+
+                        <a href="/Default/HaberDetay/1">
+                           <h4>Google hakkında merak ettiğiniz şeyler</h4> </a>
+
+                            <p>Google hakkında merak ettiğiniz şeyler Dell hakkında merak ettiğiniz şeyler</p>
+                            <span>
+                                Yüklenme Tarihi : 09.11.2020
+                            </span>
+</div>
+                </div>
+                <div class="right" style="height:310px; width:309px;">
+                    <div class="bot-left">
+                        <a href="/Default/HaberDetay/6"> <img src="~/web/images/microsoft.jpg" alt="" height="175" width="300" /></a>
+</div>
+                    <div class="left-text">
+
+                        <a href="/Default/HaberDetay/6">
+                            <h4>Microsoft hakkında merak ettiğiniz şeyler</h4></a>
+
+                            <p>Microsoft hakkında merak ettiğiniz şeyler Fujitsu hakkında merak ettiğiniz şeyler</p>
+                            <span>
+                                Yüklenme Tarihi : 10.11.2020
+                            </span>
+</div>
+                </div>
+                <div class="left" style="height:310px; width:309px;">
+                    <div class="bot-left">
+                        <a href="/Default/HaberDetay/10"> <img src="~/web/images/apple.jpg" alt="" height="175" width="300" /></a>
+</div>
+                    <div class="left-text">
+                        <a href="/Default/HaberDetay/10">
+                            <h4>Apple hakkında merak ettiğiniz şeyler</h4> </a>
+
+                            <p>Apple hakkında merak ettiğiniz şeyler Lenovo hakkında merak ettiğiniz şeyler</p>
+                            <span>
+                                Yüklenme Tarihi : 12.11.2020
+                            </span>
+</div>
+                </div>
+                <div class="right" style="height:310px; width:309px;">
+                    <div class="bot-left">
+                        <a href="/Default/HaberDetay/11"> <img src="~/web/images/facebook.jpg" alt="" height="175" width="300" /></a>
+</div>
+                    <div class="left-text">
+
+                        <a href="/Default/HaberDetay/11">
+                            <h4>Facebook hakkında merak ettiğiniz şeyler</h4></a>
+
+                            <p>Facebook hakkında merak ettiğiniz şeyler Dell hakkında merak ettiğiniz şeyler</p>
+                            <span>
+                                Yüklenme Tarihi : 12.11.2020
+                            </span>
+</div>
+                </div>
+                <div class="right" style="height:310px; width:309px;">
+                    <div class="bot-left">
+                        <a href="/Default/HaberDetay/16">   <img src="~/web/images/amazon.jpg" alt="" height="175" width="300" /></a>
+</div>
+                    <div class="left-text">
+
+                        <a href="/Default/HaberDetay/16">
+                            <h4>Amazon hakkında merak ettiğiniz şeyler</h4></a>
+
+                            <p>Amazon hakkında merak ettiğiniz şeyler Fujitsu hakkında merak ettiğiniz şeyler</p>
+                            <span>
+                                Yüklenme Tarihi : 13.11.2020
+                            </span>
+</div>
+                </div>
+                <div class="left" style="height:310px; width:309px;">
+                    <div class="bot-left">
+                        <a href="/Default/HaberDetay/17">    <img src="~/web/images/ibm.png" alt="" height="175" width="300" /></a>
+</div>
+                    <div class="left-text">
+                        <a href="/Default/HaberDetay/17">
+                            <h4>IBM hakkında merak ettiğiniz şeyler</h4></a>
+
+                            <p>IBM hakkında merak ettiğiniz şeyler Lenovo hakkında merak ettiğiniz şeyler</p>
+                            <span>
+                                Yüklenme Tarihi : 14.11.2020
+                            </span>
+</div>
+                </div>
+                <div class="right" style="height:310px; width:309px;">
+                    <div class="bot-left">
+                        <a href="/Default/HaberDetay/19">   <img src="~/web/images/huawei.jpg" alt="" height="175" width="300" /></a>
+</div>
+                    <div class="left-text">
+
+                        <a href="/Default/HaberDetay/19">
+                            <h4>Huawei hakkında merak ettiğiniz şeyler</h4> </a>
+
+                            <p>Huawei hakkında merak ettiğiniz şeyler Oracle hakkında merak ettiğiniz şeyler</p>
+                            <span>
+                                Yüklenme Tarihi : 15.11.2020
+                            </span>
+</div>
+                </div>
+                <div class="right" style="height:310px; width:309px;">
+                    <div class="bot-left">
+                        <a href="/Default/HaberDetay/20">  <img src="~/web/images/samsung.jpg" alt="" height="175" width="300" /></a>
+</div>
+                    <div class="left-text">
+
+                        <a href="/Default/HaberDetay/20">
+                            <h4>Samsung hakkında merak ettiğiniz şeyler</h4> </a>
+
+                            <p>Samsung hakkında merak ettiğiniz şeyler Sony hakkında merak ettiğiniz şeyler</p>
+                            <span>
+                                Yüklenme Tarihi : 16.11.2020
+                            </span>
+</div>
+                </div>
+                <div class="left" style="height:310px; width:309px;">
+                    <div class="bot-left">
+                        <a href="/Default/HaberDetay/21">    <img src="~/web/images/sony.jpg" alt="" height="175" width="300" /> </a>
+</div>
+                    <div class="left-text">
+                        <a href="/Default/HaberDetay/21">
+                            <h4>Sony hakkında merak ettiğiniz şeyler</h4> </a>
+
+                            <p>Sony hakkında merak ettiğiniz şeyler Panasonic hakkında merak ettiğiniz şeyler</p>
+                            <span>
+                                Yüklenme Tarihi : 17.11.2020
+                            </span>
+</div>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+           </br>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

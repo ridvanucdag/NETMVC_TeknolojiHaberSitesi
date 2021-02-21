@@ -1,0 +1,29 @@
+﻿@using MuhendislikProjesi.Models.Siniflar
+@model List<Hakkimizda>
+@{
+    ViewBag.Title = "Hakkimizda";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Hakkimizda</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>HakkımızdaID</th>
+        @*<th>Hakkımızda Resim </th>*@
+        <th>Hakkımızda Açıklama</th>
+        <th>GUNCELLE</th>
+
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.HakkimizdaID</td>
+            @*<td>@x.HakkimizdaFoto</td>*@
+            <td>@x.HakkimizdaAciklama</td>
+            <td><a href="/Admin/HakkimizdaGuncelle/@x.HakkimizdaID" class="btn btn-default">Guncelle</a></td>
+        </tr>
+    }
+</table>
+
+

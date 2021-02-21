@@ -1,0 +1,24 @@
+﻿@model MuhendislikProjesi.Models.Siniflar.Haber
+@{
+    ViewBag.Title = "YeniHaber";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Yeni Haber Ekle</h2>
+<form class="form-group" method="post">
+    @Html.LabelFor(x=>x.HaberBaslik)
+    @Html.TextBoxFor(x => x.HaberBaslik, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x=>x.HaberAciklama)
+    @Html.TextAreaFor(x => x.HaberAciklama,9,1, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x=>x.HaberFoto)
+    @Html.TextBoxFor(x => x.HaberFoto, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x=>x.HaberTarih)
+    @Html.TextBoxFor(x => x.HaberTarih, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Haber Ekle</button>
+
+</form>
+
